@@ -7,10 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      // backgroundImage: {
+      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      //   "gradient-conic":
+      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      // },
+      colors: {
+        grayishBlue: 'hsl(237, 18%, 59%)',
+        softRed: 'hsl(345, 95%, 68%)',
+        darkDesaturatedBlue: 'hsl(236, 21%, 26%)',
+        veryDarkBlue: 'hsl(235, 16%, 14%)',
+        veryDarkMostlyBlackBlue: 'hsl(234, 17%, 12%)',
+      },
+      borderWidth: {
+        '12': '12px',
       },
     },
   },

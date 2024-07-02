@@ -2,32 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@keyframes twinkling {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.starry-background {
+  position: relative;
+  overflow: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.starry-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.starry-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%; /* Restrict height to top 80% */
+  background: transparent;
+  z-index: 1;
+  pointer-events: none;
+  animation: twinkling 5s infinite;
+}
+
+.starry-background::after {
+  content: '';
+  position: absolute;
+  background: hsl(237, 18%, 59%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 
+    20vw 10vh hsl(237, 18%, 59%), 
+    40vw 15vh hsl(237, 18%, 59%), 
+    60vw 20vh hsl(237, 18%, 59%), 
+    80vw 25vh hsl(237, 18%, 59%), 
+    15vw 30vh hsl(237, 18%, 59%), 
+    35vw 35vh hsl(237, 18%, 59%), 
+    55vw 40vh hsl(237, 18%, 59%), 
+    75vw 45vh hsl(237, 18%, 59%), 
+    10vw 50vh hsl(237, 18%, 59%), 
+    30vw 55vh hsl(237, 18%, 59%), 
+    50vw 60vh hsl(237, 18%, 59%), 
+    70vw 65vh hsl(237, 18%, 59%), 
+    90vw 70vh hsl(237, 18%, 59%), 
+    25vw 75vh hsl(237, 18%, 59%), 
+    45vw 80vh hsl(237, 18%, 59%);
 }
