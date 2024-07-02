@@ -16,11 +16,15 @@ module.exports = {
         grayishBlue: 'hsl(237, 18%, 59%)',
         softRed: 'hsl(345, 95%, 68%)',
         darkDesaturatedBlue: 'hsl(236, 21%, 26%)',
+        darkerDesaturated: 'hsl(236, 21%, 20%)',
         veryDarkBlue: 'hsl(235, 16%, 14%)',
         veryDarkMostlyBlackBlue: 'hsl(234, 17%, 12%)',
       },
       borderWidth: {
         '12': '12px',
+      },
+      letterSpacing: {
+        'extra-wide': '0.5rem',
       },
     },
   },
