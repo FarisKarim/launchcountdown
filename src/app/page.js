@@ -69,7 +69,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative flex justify-center bg-veryDarkMostlyBlackBlue starry-background">
-      <div className="w-full sm:w-1/2 flex flex-col justify-center md:gap-24 lg:gap-36 h-[75vh] sm:h-[60vh]">
+      <div className="w-full sm:w-1/2 flex flex-col sm:space-y-36 justify-center h-[75vh]">
         <p className="text-center -mt-16 px-5 mb-10 sm:mb-0 sm:-mt-0 tracking-extra-wide text-xl text-white">
           WE'RE LAUNCHING SOON
         </p>
